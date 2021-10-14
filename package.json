@@ -7,5 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Melvin DOUCET",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "https://github.com/MelvDouc/student-notifier.github.io.git"
 }
