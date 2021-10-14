@@ -1,0 +1,11 @@
+{
+  "name": "student-notif",
+  "version": "1.0.0",
+  "description": "Projet d'automatisation de notification hebdomadaire par mail des élèves à chaque semaine de cours.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melvin DOUCET",
+  "license": "ISC"
+}
