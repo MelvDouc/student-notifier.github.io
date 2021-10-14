@@ -1,4 +1,3 @@
-"use strict";
 class StudentGroup {
     attendanceDay;
     constructor(attendanceDay) {

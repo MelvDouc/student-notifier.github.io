@@ -1,4 +1,3 @@
-"use strict";
 class StudentNotifDate extends Date {
     get year() {
         return this.getFullYear();

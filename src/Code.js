@@ -1,4 +1,3 @@
-"use strict";
 function notifyStudents() {
     const date = new StudentNotifDate();
     if (!date.isSendWeek())

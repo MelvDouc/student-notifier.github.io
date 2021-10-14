@@ -1,4 +1,3 @@
-"use strict";
 class StudentNotifEmail {
     group;
     constructor(group) {
