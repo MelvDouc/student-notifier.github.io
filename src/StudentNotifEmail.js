@@ -1,5 +1,4 @@
 class StudentNotifEmail {
-    group;
     constructor(group) {
         this.group = group;
     }

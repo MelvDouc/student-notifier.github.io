@@ -1,5 +1,4 @@
 class StudentGroup {
-    attendanceDay;
     constructor(attendanceDay) {
         this.attendanceDay = attendanceDay;
     }
@@ -14,10 +13,10 @@ class StudentGroup {
             .getValues();
         return emailValues
             .reduce((acc, [email, day, active]) => {
-            const isSameDay = day === this.attendanceDay;
-            const isActive = active === "oui";
-            return (isSameDay && isActive) ? acc.concat(email) : acc;
-        }, [])
+                const isSameDay = day === this.attendanceDay;
+                const isActive = active === "oui";
+                return (isSameDay && isActive) ? acc.concat(email) : acc;
+            }, [])
             .join();
     }
     get attendsOnFriday() {
