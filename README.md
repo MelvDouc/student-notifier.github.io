@@ -27,3 +27,9 @@ clasp pull
 ```
 clasp push
 ```
+
+## TypeScript
+
+```
+npm i -D @types/google-apps-script
+```
