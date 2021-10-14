@@ -5,13 +5,20 @@ class StudentNotifEmail {
     this.group = group;
   }
 
-  getAltBody(): string {
-    return `Bonsoir,
+  getTemplateBody(): string {
+    const html = this.getHTMLBody();
+    const startIndex = html.search("<body"),
+      endIndex = html.search("</body>");
+    return html.substring(startIndex, endIndex);
+  }
 
-    Il y aura cours ce ${this.group.dateInFrench} ${this.group.year} de ${this.group.startHour} à ${this.group.endHour} au club de Thionville.
-    
-    Cordialement,
-    Melvin DOUCET`;
+  getAltBody(): string {
+    const brRegex = /\<br(\s\/)?\>/g;
+    const tagRegex = /\<(\w+(-\w+)*(\s+\w+(-\w+)*(\=('|").*('|"))*)*|\/\w+(-\w+)*)\>/g;
+
+    return this.getTemplateBody()
+      .replace(brRegex, "\n")
+      .replace(tagRegex, "");
   }
 
   getHTMLBody(): string {
