@@ -1,4 +1,4 @@
-function GETWEEK(range: string) {
+function GETWEEK(range: string): number {
   const date = new StudentNotifDate(range);
 
   if (!date.isValid())

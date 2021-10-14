@@ -1,13 +1,13 @@
 class StudentNotifDate extends Date {
-  get year() {
+  get year(): number {
     return this.getFullYear();
   }
 
-  get month() {
+  get month(): number {
     return this.getMonth();
   }
 
-  get monthDay() {
+  get monthDay(): number {
     return this.getDate();
   }
 
@@ -20,7 +20,7 @@ class StudentNotifDate extends Date {
     return _sheet;
   }
 
-  get dates() {
+  get dates(): StudentNotifDate[] {
     return this.sheet
       .getRange(`D3:D${this.sheet.getLastRow()}`)
       .getValues()
@@ -28,11 +28,11 @@ class StudentNotifDate extends Date {
       .map(date => new StudentNotifDate(date));
   }
 
-  isValid() {
+  isValid(): boolean {
     return !isNaN(this.getTime());
   }
 
-  equals(compareDate: StudentNotifDate) {
+  equals(compareDate: StudentNotifDate): boolean {
     return this.year === compareDate.year
       && this.month === compareDate.month
       && this.monthDay === compareDate.monthDay;

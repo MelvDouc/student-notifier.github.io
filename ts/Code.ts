@@ -1,4 +1,4 @@
-function notifyStudents() {
+function notifyStudents(): void {
   const date = new StudentNotifDate();
   if (!date.isSendWeek())
     return;

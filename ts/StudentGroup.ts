@@ -28,7 +28,7 @@ class StudentGroup {
       .join();
   }
 
-  get attendsOnFriday() {
+  get attendsOnFriday(): boolean {
     return this.attendanceDay === "vendredi";
   }
 
@@ -44,19 +44,19 @@ class StudentGroup {
     return this.attendsOnFriday ? 5 : 0;
   }
 
-  get attendanceDate() {
+  get attendanceDate(): StudentNotifDate {
     return new StudentNotifDate().getNextWeekDay(this.weekDay);
   }
 
-  get year() {
+  get year(): number {
     return this.attendanceDate.year;
   }
 
-  get dateInFrench() {
+  get dateInFrench(): string {
     return this.attendanceDate.toFrench();
   }
 
-  notify() {
+  notify(): void {
     const email = new StudentNotifEmail(this);
 
     MailApp.sendEmail({
