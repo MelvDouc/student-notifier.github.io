@@ -8,5 +8,8 @@
   },
   "author": "Melvin DOUCET",
   "license": "ISC",
-  "repository": "https://github.com/MelvDouc/student-notifier.github.io.git"
+  "repository": "https://github.com/MelvDouc/student-notifier.github.io.git",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.37"
+  }
 }
