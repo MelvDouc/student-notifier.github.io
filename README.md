@@ -7,7 +7,7 @@ npm i -g @google/clasp
 2. Go to Script Editor.
 3. Get Script ID from settings.
 ```
-clas login
+clasp login
 ```
 4. Visit provided url to log in.
 5. Create project folder.
