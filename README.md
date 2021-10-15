@@ -5,7 +5,7 @@
 npm i -g @google/clasp
 ```
 2. Go to Script Editor.
-3. Get Script ID from settings.
+3. Get Script ID from settings and save it to ENV variables.
 ```
 clasp login
 ```
@@ -17,6 +17,10 @@ npm init
 6. Create src folder in project folder.
 ```
 clasp clone "scriptID" --rootDir src
+```
+7. Remove .clasp.json and re-create it dynamically by running:
+```
+npm run create-clasp
 ```
 
 ## Managing changes
