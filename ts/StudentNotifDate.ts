@@ -42,24 +42,22 @@ class StudentNotifDate extends Date {
     return new StudentNotifDate(this.year, this.month, this.monthDay + total);
   }
 
-  getNextWeekDay(weekDay: number): StudentNotifDate {
-    if (this.getDay() === weekDay)
+  getNextWeekDay(nextWeekDay: number): StudentNotifDate {
+    const difference = nextWeekDay - this.getDay();
+
+    if (difference === 0)
       return this;
-    return this.addDays(1).getNextWeekDay(weekDay);
-  }
 
-  getFirstMondayOfYear(): StudentNotifDate {
-    const firstDayOfYear = new StudentNotifDate(this.year, 0, 1);
-    let currentDate = firstDayOfYear;
+    if (difference < 0)
+      return this.addDays(7 + difference);
 
-    while (currentDate.getDay() !== 1)
-      currentDate = currentDate.addDays(1);
-
-    return currentDate;
+    return this.addDays(difference);
   }
 
   getWeek(): number {
-    let currentDate = this.getFirstMondayOfYear();
+    const firstDayOfYear = new StudentNotifDate(this.year, 0, 1);
+    const firstMondayOfYear = firstDayOfYear.getNextWeekDay(1);
+    let currentDate = firstMondayOfYear;
     let week = 1;
 
     while (!this.equals(currentDate)) {
