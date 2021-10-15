@@ -4,9 +4,7 @@
   "description": "Projet d'automatisation de notification hebdomadaire par mail des élèves à chaque semaine de cours.",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "create-clasp": "node index.js"
-  },
+  "scripts": {},
   "author": "Melvin DOUCET",
   "license": "ISC",
   "repository": "https://github.com/MelvDouc/student-notifier.github.io.git",

@@ -18,10 +18,6 @@ npm init
 ```
 clasp clone "scriptID" --rootDir src
 ```
-7. Remove .clasp.json and re-create it dynamically by running:
-```
-npm run create-clasp
-```
 
 ## Managing changes
 
